@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <vector>
 #include <thread>
+#include <sstream>
 
 template <typename index_t>
 void say_hello_template(index_t id) {
@@ -9,7 +10,9 @@ void say_hello_template(index_t id) {
 }
 
 void say_hello(uint64_t id) {
-    std::cout << "Hello from thread: "  << id << std::endl;
+    	std::ostringstream ss;
+	ss << "Hello from thread: "  << id << std::endl;
+	std::cout << ss.str();
 }
 
 int main(int argc, char * argv[]) {
