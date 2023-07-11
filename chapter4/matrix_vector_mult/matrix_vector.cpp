@@ -180,7 +180,7 @@ int main(int argc, char* argv[]) {
     TIMERSTOP(init)
 
     TIMERSTART(mult)
-    block_cyclic_parallel_mult(A, x, b, m, n);
+    block_parallel_mult(A, x, b, m, n);
     TIMERSTOP(mult)
 
     TIMERSTOP(overall)
